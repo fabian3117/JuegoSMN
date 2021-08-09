@@ -2,6 +2,7 @@
 #include<stdlib.h>
 #include<string.h>
 #define DIRBASE "C:/Users/fede/Desktop/asysTP/datos/"
+#define DirLoc "./datos"
 #define ModoTex "t"
 
 #define AnioBase 2018
@@ -9,7 +10,7 @@
 //-->   Formato de las carpetas es ./Anio/aaaaddmm.txt 
 //dirBase=''
 
-int main (void) {
+int cosa (void) {
 
 //-->   Primero abro el archivo de .txt <---
 FILE* f;
@@ -55,4 +56,36 @@ printf("\n\r%s",directorio);
 f=fopen(directorio, "r");
 
     
+}
+char* GeneraDirArc(int anio,char mes,char dia){
+char d[2]="";
+char an[4]="";
+char m[2]="";
+if(dia<10){
+d[0]="0";
+d[1]=dia;
+}
+else{
+
+    sprintf(d,"%d",(int)dia);
+}
+if(mes<10){
+m[0]="0";
+m[1]=mes;
+}
+else{
+
+    sprintf(m,"%d",(int)mes);
+}
+sprintf(an,"%d",anio);
+
+    return "HOLA";
+}
+int main(void) {
+    printf("\n\r%s\n\r",DirLoc);
+FILE* f=fopen(DirLoc,"r");
+if(f==NULL) {
+    printf("FALLOAPERTURA\n\r");
+    return 0;}
+return 0;
 }
