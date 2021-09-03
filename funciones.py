@@ -1,8 +1,8 @@
 import requests;
 import os;
-def DiaVaria(dirBase,aaaa,mmBase):
 
-    for i in range(1,31,1):
+def DiaVaria(dirBase,aaaa,mmBase, i):
+
         
         dd=str(i)
     

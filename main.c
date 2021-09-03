@@ -78,7 +78,9 @@ else{
     sprintf(m,"%d",(int)mes);
 }
 sprintf(an,"%d",anio);
-
+printf("\n\r%s",m);
+printf("\n\r%s",d);
+//printf("\n\r%s",an);
     return "HOLA";
 }
 int main(void) {
@@ -86,6 +88,8 @@ int main(void) {
 FILE* f=fopen(DirLoc,"r");
 if(f==NULL) {
     printf("FALLOAPERTURA\n\r");
+
+    GeneraDirArc(2018,5,5);
     return 0;}
 return 0;
 }
